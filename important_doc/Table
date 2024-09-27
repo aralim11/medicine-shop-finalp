@@ -1,0 +1,98 @@
+1.Table Admin
+
+Admin ID
+Admin Name
+Admin Email
+Admin Password
+Admin Role
+
+2.Table Shop
+
+Owner ID
+Shop Name 
+Owner Name
+Owner Email
+Owner Password
+Owner Address
+Owner Phone
+Owner Level
+Owner Picture
+Owner Zone
+
+3.Table Product
+
+Product ID
+Category ID
+Product Name
+Product Details
+Purchase Price
+Sell Price
+Retails Price
+Add Tax
+Product Quqntity
+Product Picture
+Product Date
+Owner ID
+
+
+4. Category Table
+
+Category ID
+Category Name
+Category Details
+Owner ID
+
+5. Table Stock
+
+Stock ID
+Invoice
+Barcode
+Product Name
+Product Details
+Product Quqntity
+Purchase Price
+Retails Price
+Sele Price
+Vat Tax
+Stock Date
+Owner ID
+
+
+6.Table Purchase
+
+Purchase ID
+Purchase Product ID
+Invoice 
+Purchase Price
+Sele Price
+Retails Price
+Quantity 
+Purchase Date
+Owner ID
+
+
+7.Table Sele
+
+Sale ID
+Invoice 
+Stock ID
+Product ID
+Barcode
+Product Name
+Sele Price
+Purchase Price
+Retails Price
+Owner ID
+
+
+
+
+
+
+
+
+
+
+
+
+
