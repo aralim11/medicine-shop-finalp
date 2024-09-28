@@ -19,8 +19,8 @@ Route::post('/login-check', 'LogInCheck@adminCheck');
 
 //Districts & Upozila
 
-Route::get('/add/district','AdminDashController@addDistrict');
-Route::get('/add/pstation','AdminDashController@addUpozila');
+Route::get('/add/district', 'AdminDashController@addDistrict');
+Route::get('/add/pstation', 'AdminDashController@addUpozila');
 Route::post('/save/district', 'AdminDashController@saveDistrict');
 Route::post('/save/upozila', 'AdminDashController@saveUpozila');
 Route::get('/view/alldp', 'AdminDashController@manageDP');
@@ -31,11 +31,11 @@ Route::get('/admin-dash', 'AdminDashController@index');
 Route::get('/add/seller', 'AdminDashController@addSeller');
 Route::post('/save/seller', 'AdminDashController@saveSelller');
 Route::get('/view/seller', 'AdminDashController@manageSeller');
-Route::get('/edit/seller/{id}','AdminDashController@editSeller');
-Route::post('/update/seller','AdminDashController@updateSeller');
-Route::get('/suspend/seller/{id}','AdminDashController@suspendSeller');
-Route::get('/active/seller/{id}','AdminDashController@activeSeller');
-Route::get('/delete/seller/{id}','AdminDashController@deleteSeller');
+Route::get('/edit/seller/{id}', 'AdminDashController@editSeller');
+Route::post('/update/seller', 'AdminDashController@updateSeller');
+Route::get('/suspend/seller/{id}', 'AdminDashController@suspendSeller');
+Route::get('/active/seller/{id}', 'AdminDashController@activeSeller');
+Route::get('/delete/seller/{id}', 'AdminDashController@deleteSeller');
 
 
 
@@ -125,7 +125,7 @@ Route::post('/update/password', 'ProfileController@updatePassword');
 Route::get('/invoice', 'InvoiceController@index');
 
 //Print Pdf
-Route::get('pdf','InvoiceController@Pdf');
+Route::get('pdf', 'InvoiceController@Pdf');
 
 //Remember Password
 Route::post('/rememberpass', 'RememberPass@index')->name('rememberpass');
@@ -140,21 +140,21 @@ Route::get('/product', 'WelcomeController@product');
 Route::get('/contact', 'WelcomeController@contact');
 
 //Become A Seller
-Route::get('/becomeSeller','WelcomeController@becomeSeller');
-Route::post('select-registration',['as'=>'select-registration','uses'=>'WelcomeController@selectRegistration']);
+Route::get('/becomeSeller', 'WelcomeController@becomeSeller');
+Route::post('select-registration', ['as' => 'select-registration', 'uses' => 'WelcomeController@selectRegistration']);
 
 
-Route::post('/registration','WelcomeController@Registration')->name('registration');
-Route::get('/seller-request','WelcomeController@sellerRequest');
+Route::post('/registration', 'WelcomeController@Registration')->name('registration');
+Route::get('/seller-request', 'WelcomeController@sellerRequest');
 Route::get('/single/product/{id}', 'WelcomeController@productDetails');
 Route::get('/accept/request/{id}', 'WelcomeController@acceptRequest');
 
-Route::post('select-ajax',['as'=>'select-ajax','uses'=>'WelcomeController@selectAjax']);
-Route::post('search','WelcomeController@selectAjax')->name('search');
-Route::get('/search','WelcomeController@selectAjax');
+Route::post('select-ajax', ['as' => 'select-ajax', 'uses' => 'WelcomeController@selectAjax']);
+Route::post('search', 'WelcomeController@selectAjax')->name('search');
+Route::get('/search', 'WelcomeController@selectAjax');
 
 
 
-Route::post('select-quantity',['as'=>'select-quantity','uses'=>'SaleController@selectAjax']);
-Route::post('total-amount','SaleController@totalAmount')->name('total-amount');
-Route::post('submitAmount','SaleController@cashCheck')->name('submitAmount');
+Route::post('select-quantity', ['as' => 'select-quantity', 'uses' => 'SaleController@selectAjax']);
+Route::post('total-amount', 'SaleController@totalAmount')->name('total-amount');
+Route::post('submitAmount', 'SaleController@cashCheck')->name('submitAmount');

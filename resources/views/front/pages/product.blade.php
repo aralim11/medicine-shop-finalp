@@ -23,9 +23,6 @@
                 @foreach($all_product as $all_products)
                 <div class="col-md-3">
                     <div class="well product_img">
-
-
-
                         <a href="{{url('single/product/'.$all_products->product_id)}}"><img alt="" src="{{$all_products->product_picture }}"  /></a>	
                         <p class="text-center" style="font-weight: bold; color: black;font-family: verdana;">{{$all_products->product_name}}</p>
                         <p class="text-center"><span style="float: left; font-family: verdana;">{{$all_products->shop_name}}</span><span style="color: black; margin-left: 50px;">{{$all_products->supplier_name }}</span></p>

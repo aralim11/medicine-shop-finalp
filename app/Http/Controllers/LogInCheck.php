@@ -9,17 +9,19 @@ use Illuminate\Support\Facades\Session;
 
 session_start();
 
-class LogInCheck extends Controller {
+class LogInCheck extends Controller
+{
 
 
-    public function adminCheck(Request $request) {
+    public function adminCheck(Request $request)
+    {
         $admin_email = $request->email;
         $password = $request->password;
 
         $admin_info = DB::table('tbl_admins')
-                ->where('admin_email', $admin_email)
-                ->where('password', md5($password))
-                ->first();
+            ->where('admin_email', $admin_email)
+            ->where('password', md5($password))
+            ->first();
 
 
         if ($admin_info) {
@@ -31,18 +33,19 @@ class LogInCheck extends Controller {
             return Redirect::to('/admin');
         }
     }
-    
-    
-    public function sellerlogin_check(Request $request) {
+
+
+    public function sellerlogin_check(Request $request)
+    {
         $seller_email = $request->seller_email;
         $password = $request->password;
-       
+
 
         $seller_info = DB::table('sellers')
-                ->where('seller_email', $seller_email)
-                ->where('password', md5($password))
-                ->first();
-        
+            ->where('seller_email', $seller_email)
+            ->where('password', md5($password))
+            ->first();
+
         if ($seller_info) {
             Session::put('seller_id', $seller_info->seller_id);
             Session::put('seller_name', $seller_info->seller_name);
@@ -60,7 +63,8 @@ class LogInCheck extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
+    public function create()
+    {
         //
     }
 
@@ -70,7 +74,8 @@ class LogInCheck extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         //
     }
 
@@ -80,7 +85,8 @@ class LogInCheck extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
+    public function show($id)
+    {
         //
     }
 
@@ -90,7 +96,8 @@ class LogInCheck extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) {
+    public function edit($id)
+    {
         //
     }
 
@@ -101,7 +108,8 @@ class LogInCheck extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id) {
+    public function update(Request $request, $id)
+    {
         //
     }
 
@@ -111,8 +119,8 @@ class LogInCheck extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) {
+    public function destroy($id)
+    {
         //
     }
-
 }
